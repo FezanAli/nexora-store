@@ -1,0 +1,128 @@
+<main>
+  <section class="hero">
+    <div class="nx-container hero__grid">
+      <div class="hero__copy">
+        <span class="nx-kicker">NEXORA / NEW SEASON</span>
+        <h1>Technology that feels one step ahead.</h1>
+        <p>Curated devices, intelligent recommendations and a shopping experience designed around what you actually need.</p>
+        <div class="hero__actions">
+          <a class="nx-btn nx-btn--accent" routerLink="/catalog">Shop new arrivals →</a>
+          <a class="nx-btn nx-btn--light" href="#smart-finder">Find my setup ✦</a>
+        </div>
+        <div class="hero__proof">
+          <div><strong>4.9/5</strong><span>verified buyers</span></div>
+          <div><strong>24h</strong><span>dispatch</span></div>
+          <div><strong>30 days</strong><span>easy returns</span></div>
+        </div>
+      </div>
+
+      <div class="hero__visual" aria-label="Featured technology collection">
+        <div class="glow"></div>
+        <div class="orb orb--one"></div>
+        <div class="orb orb--two"></div>
+        <div class="phone">
+          <div class="phone__camera"><i></i><i></i><i></i></div>
+          <span>NEXORA</span>
+        </div>
+        <div class="floating-card floating-card--top">
+          <span>EDITOR'S PICK</span><strong>Aero X1</strong><small>from $1,099</small>
+        </div>
+        <div class="floating-card floating-card--bottom">
+          <span>SMART MATCH</span><strong>96%</strong><small>for creators</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nx-section categories-block">
+    <div class="nx-container">
+      <div class="nx-section__head">
+        <div><span class="nx-kicker">Shop by world</span><h2>Find your next upgrade.</h2></div>
+        <p>Browse a focused selection of technology without fighting through an endless wall of products.</p>
+      </div>
+
+      <div class="category-grid">
+        <a routerLink="/catalog" class="category-card category-card--large">
+          <span>01</span><strong>Mobile</strong><em>Phones · tablets · accessories</em><i>↗</i>
+        </a>
+        <a routerLink="/catalog" class="category-card category-card--dark">
+          <span>02</span><strong>Computing</strong><em>Laptops · monitors · storage</em><i>↗</i>
+        </a>
+        <a routerLink="/catalog" class="category-card category-card--violet">
+          <span>03</span><strong>Audio</strong><em>Headphones · speakers · studio</em><i>↗</i>
+        </a>
+        <a routerLink="/catalog" class="category-card category-card--lime">
+          <span>04</span><strong>Gaming</strong><em>Consoles · gear · displays</em><i>↗</i>
+        </a>
+        <a routerLink="/catalog" class="category-card category-card--soft">
+          <span>05</span><strong>Smart living</strong><em>Wearables · home · health</em><i>↗</i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="nx-section products-section">
+    <div class="nx-container">
+      <div class="nx-section__head">
+        <div><span class="nx-kicker">Trending now</span><h2>Worth your attention.</h2></div>
+        <a routerLink="/catalog" class="text-link">View all products →</a>
+      </div>
+      <div class="product-grid">
+        @for (product of products; track product.id) {
+          <nx-product-card [product]="product" (add)="addToCart($event)" />
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="nx-section smart" id="smart-finder">
+    <div class="nx-container smart__panel">
+      <div class="smart__copy">
+        <span class="nx-kicker nx-kicker--dark">NEXORA SMART FINDER</span>
+        <h2>Tell us what you need. We'll narrow down the noise.</h2>
+        <p>Instead of opening twenty tabs, answer a few questions about budget, workload and preferences. Our guided finder builds a shortlist you can compare.</p>
+        <button class="nx-btn nx-btn--accent">Start smart finder ✦</button>
+      </div>
+      <div class="smart__demo">
+        <div class="chat chat--user">I need a laptop for coding, UI design and light gaming under $1,600.</div>
+        <div class="chat chat--system">
+          <span>✦ NEXORA</span>
+          <strong>3 strong matches found</strong>
+          <div class="match"><i></i><p><b>FrameBook Pro 14</b><small>OLED · 32GB · 1TB</small></p><em>96%</em></div>
+          <div class="match"><i></i><p><b>Core Studio 15</b><small>RTX graphics · 32GB</small></p><em>92%</em></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nx-section deal-section">
+    <div class="nx-container deal">
+      <div class="deal__copy">
+        <span>WEEKEND TECH DROP</span>
+        <h2>Premium audio.<br>Less noise on the price.</h2>
+        <p>Selected headphones and speakers with limited promotional pricing.</p>
+        <a class="nx-btn nx-btn--dark" routerLink="/catalog">Explore the drop →</a>
+      </div>
+      <div class="deal__art"><div class="headphone"></div></div>
+    </div>
+  </section>
+
+  <section class="nx-section trust">
+    <div class="nx-container trust__grid">
+      <div><span>01</span><strong>Fast, tracked delivery</strong><p>Clear delivery estimates and order tracking from checkout to your door.</p></div>
+      <div><span>02</span><strong>Real support</strong><p>Product help before you buy and human support when something goes wrong.</p></div>
+      <div><span>03</span><strong>Easy returns</strong><p>A straightforward return flow without digging through support pages.</p></div>
+      <div><span>04</span><strong>Secure by design</strong><p>Modern authentication, payment abstraction and privacy-conscious architecture.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="nx-container footer__grid">
+    <div><div class="footer__brand">NEXORA</div><p>Curated technology for work, play and everything between.</p></div>
+    <div><strong>Shop</strong><a routerLink="/catalog">New arrivals</a><a routerLink="/catalog">Phones</a><a routerLink="/catalog">Computing</a><a routerLink="/catalog">Audio</a></div>
+    <div><strong>Help</strong><a href="#">Delivery</a><a href="#">Returns</a><a href="#">Warranty</a><a href="#">Contact</a></div>
+    <div><strong>Stay in the loop</strong><p>New drops, guides and occasional deals.</p><label class="newsletter"><input placeholder="Email address"><button>→</button></label></div>
+  </div>
+  <div class="nx-container footer__bottom">© 2026 NEXORA <span>Privacy · Terms · Accessibility</span></div>
+</footer>
