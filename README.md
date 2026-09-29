@@ -2,16 +2,7 @@
 
 A premium, large-scale electronics e-commerce frontend foundation built for modern Angular.
 
-## 1) Create the Angular app
-
-```bash
-npx @angular/cli@22 new nexora-store --routing --style=scss --standalone --ssr
-cd nexora-store
-```
-
-When the CLI asks about optional AI tooling, choose your preference. Then replace the generated `src/app` folder and `src/styles.scss` with the files from this starter.
-
-## 2) Run it
+## 1) Run it
 
 ```bash
 npm install
